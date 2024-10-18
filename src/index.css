@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template: 'header' 200px 'main' 1fr 'footer' 100px;
+  width: 100vw;
+  height: 150vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: red;
+}
+
+.main {
+  grid-area: main;
+  background-color: yellow;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: purple;
+}
