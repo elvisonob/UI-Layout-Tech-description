@@ -1,11 +1,47 @@
 import './index.css';
+import search from './images/search.png';
+import hearts from './images/hearts.png';
+import institute from './images/institute.jpg';
 
 const App = () => {
   return (
     <div className="container">
-      <div className="header">header</div>
-      <div className="main">main</div>
-      <div className="footer">footer</div>
+      <div className="header">
+        <div className="companyLogo1">Company Logo1</div>
+        <div className="companyLogo2">Company Logo2</div>
+        <div className="search">Search</div>
+        <div className="signIn">signIn</div>
+        <div className="basket">basket</div>
+      </div>
+      <div className="menu">
+        <div>Home</div>
+        <div>Learn more</div>
+        <div>The toolkit</div>
+        <div>Prices and company License</div>
+        <div>Training and Consultancy</div>
+        <div>Case studies and Research</div>
+        <div>Contact us</div>
+      </div>
+      <div className="main">Main</div>
+      <div className="footer">
+        <div className="top-footer">
+          <div>Contact</div>
+          <div>FAQ</div>
+          <div>Site Map</div>
+          <div>Privacy Policy</div>
+          <div>Terms & Conditions</div>
+        </div>
+        <div className="bottom-footer">
+          <div className="address">
+            <div>
+              Energy Institute 61 New Cavendish Street London W1G 7AR, UK
+            </div>
+            <div className="contact-num">T: +44 (0) 20 7467 7100</div>
+            <div className="email">E: pubs@energyinst.org</div>
+          </div>
+          <div className="energy-institute">©2024 Energy Institute</div>
+        </div>
+      </div>
     </div>
   );
 };

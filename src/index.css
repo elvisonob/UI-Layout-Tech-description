@@ -6,22 +6,79 @@
 
 .container {
   display: grid;
-  grid-template: 'header' 200px 'main' 1fr 'footer' 100px;
-  width: 100vw;
+  grid-template: 'header' 100px 'menu' 100px 'main ' 1fr 'footer' 150px;
   height: 150vh;
+  width: 100vw;
+  grid-gap: 5px;
+  padding: 20px;
 }
+
+/*Header*/
 
 .header {
   grid-area: header;
-  background-color: red;
+  display: grid;
+  grid-template-columns: 200px 200px 1fr 200px 200px;
+  background-color: white;
+  grid-gap: 10px;
 }
+
+.header .companyLogo1,
+.header .companyLogo2,
+.header .search,
+.header .signIn,
+.header .basket {
+  border: 1px solid black;
+}
+
+/*Header*/
+
+/*menu*/
+
+.menu {
+  grid-area: menu;
+  background-color: blue;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 1fr 1fr 1fr 200px;
+  font-size: larger;
+}
+
+/*menu*/
+
+/*main*/
 
 .main {
   grid-area: main;
-  background-color: yellow;
+  background-color: green;
 }
+
+/*main*/
+
+/*footer*/
 
 .footer {
   grid-area: footer;
-  background-color: purple;
+  background-color: violet;
+  padding: 10px;
 }
+
+.top-footer {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  place-content: center;
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.address .contact-num,
+.address .email {
+  font-size: small;
+}
+
+.bottom-footer .energy-institute {
+  text-align: center;
+  font-size: small;
+}
+
+/*footer*/
