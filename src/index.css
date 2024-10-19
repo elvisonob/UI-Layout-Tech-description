@@ -9,7 +9,7 @@
   grid-template: 'header' 100px 'menu' 100px 'main ' 1fr 'footer' 150px;
   height: 150vh;
   width: 100vw;
-  grid-gap: 5px;
+  grid-gap: 10px;
   padding: 20px;
 }
 
@@ -23,12 +23,17 @@
   grid-gap: 10px;
 }
 
-.header .companyLogo1,
-.header .companyLogo2,
-.header .search,
-.header .signIn,
-.header .basket {
-  border: 1px solid black;
+.header .search {
+  display: grid;
+  grid-auto-rows: 40px 40px;
+}
+
+.topSearch {
+  display: grid;
+  border: 2px solid black;
+  grid-template-columns: 1fr 40px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
 /*Header*/
@@ -37,10 +42,14 @@
 
 .menu {
   grid-area: menu;
-  background-color: blue;
   display: grid;
-  grid-template-columns: 200px 200px 200px 1fr 1fr 1fr 200px;
+  grid-template-columns: 150px 150px 150px 1fr 1fr 1fr 200px;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: blue;
+  padding-top: 10px;
   font-size: larger;
+  font-weight: bold;
 }
 
 /*menu*/
