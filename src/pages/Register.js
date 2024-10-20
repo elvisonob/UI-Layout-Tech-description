@@ -10,7 +10,6 @@ const Register = () => {
   const [enteredPassword, setEnteredPassword] = useState('');
   const [enteredConfirmPassword, setEnteredConfirmedPassword] = useState('');
   const [error, setError] = useState(false);
-  const [serverUpdate, setServerUpdate] = useState(null);
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
@@ -37,27 +36,6 @@ const Register = () => {
     setEnteredPassword('');
     setEnteredConfirmedPassword('');
     setError(false);
-
-    try {
-      const response = await fetch('http://localhost:8080/user/register', {
-        method: 'POST',
-        body: JSON.stringify({
-          name: enteredName,
-          email: enteredEmail,
-          password: enteredPassword,
-        }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Failed to register');
-      }
-
-      setServerUpdate('Registration Successful, proceed to login now');
-    } catch (error) {
-      setServerUpdate(error.message);
-    }
   };
 
   return (
@@ -105,7 +83,6 @@ const Register = () => {
                 password matches and it is above 5 characters
               </p>
             )}
-            <div className={classes.validationControl2}>{serverUpdate}</div>
           </div>
 
           <button>Submit</button>

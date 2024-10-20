@@ -1,0 +1,12 @@
+.basket {
+  width: 360px;
+  height: 490px;
+  margin: auto;
+  border-radius: 3px;
+  background-color: white;
+  margin-top: 20px;
+}
+
+p {
+  font-size: medium;
+}

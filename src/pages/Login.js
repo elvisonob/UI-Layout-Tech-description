@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useState, useRef } from 'react';
 import classes from './Login.module.css';
 import MainNavigation from './../components/MainNavigation';
@@ -7,11 +7,9 @@ import Footer from './../components/Footer';
 const Login = () => {
   const [emailIsInvalid, setEmailIsInvalid] = useState(false);
   const [passwordIsInvalid, setPasswordIsInvalid] = useState(false);
-  const [serverInfo, setServerInfo] = useState(null);
 
   const email = useRef();
   const password = useRef();
-  const navigate = useNavigate();
 
   const onHandleSubmit = async (e) => {
     e.preventDefault();
@@ -35,25 +33,10 @@ const Login = () => {
 
     setPasswordIsInvalid(false);
 
-    try {
-      const response = await fetch('http://localhost:8080/user/login', {
-        method: 'POST',
-        body: JSON.stringify({
-          email: enteredEmail,
-          password: enteredPassword,
-        }),
-        headers: { 'Content-Type': 'application/json' },
-      });
+    console.log(enteredEmail, enteredPassword);
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Failed to login');
-      }
-
-      navigate('/userDetails');
-    } catch (error) {
-      setServerInfo(error.message);
-    }
+    email.current.value = '';
+    password.current.value = '';
   };
 
   return (
@@ -75,16 +58,12 @@ const Login = () => {
               <p>Please ensure password is at least 5 characters</p>
             )}
           </div>
-          <div className={classes.validationControl}>
-            <p>{serverInfo}</p>
-          </div>
           <button>Submit</button>
         </form>
         <p>
           Don't have an account? <Link to="/register">Register</Link>
         </p>
       </div>
-
       <Footer />
     </div>
   );
