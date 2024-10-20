@@ -1,18 +1,17 @@
 import './index.css';
-import Header from './components/Header';
-import Menu from './components/Menu';
-import Main from './components/Main';
-import Footer from './components/Footer';
+import Home from './pages/Home';
+import Register from './pages/Register';
+import Login from './pages/Login';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+const router = createBrowserRouter([
+  { path: '/', element: <Home /> },
+  { path: '/register', element: <Register /> },
+  { path: '/login', element: <Login /> },
+]);
 
 const App = () => {
-  return (
-    <div className="container">
-      <Header />
-      <Menu />
-      <Main />
-      <Footer />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;

@@ -1,6 +1,7 @@
 import search from './../images/search.png';
 import hearts from './../images/hearts.png';
 import institute from './../images/institute.jpg';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -19,9 +20,10 @@ const Header = () => {
             <img src={search} alt="search-item" width="60%" height="50%" />
           </div>
         </div>
-        <div className="bottomSearch"></div>
       </div>
-      <div className="signIn">Sign In</div>
+      <div className="signIn">
+        <Link to="/login">Sign In/Register</Link>
+      </div>
       <div className="basket">basket</div>
     </div>
   );

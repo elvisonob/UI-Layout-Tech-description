@@ -28,6 +28,11 @@
   grid-auto-rows: 40px 40px;
 }
 
+.header .signIn {
+  display: grid;
+  justify-items: center;
+}
+
 .topSearch {
   display: grid;
   border: 2px solid black;
