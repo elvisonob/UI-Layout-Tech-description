@@ -1,6 +1,6 @@
 .signUp {
   width: 360px;
-  height: 490px;
+  height: 500px;
   margin: auto;
   background-color: white;
   border-radius: 3px;
@@ -48,7 +48,7 @@ button {
 
 .validationControl {
   color: red;
-  margin-top: -10px;
+  margin-top: -15px;
   font-size: small;
 }
 

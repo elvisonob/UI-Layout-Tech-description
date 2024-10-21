@@ -77,12 +77,7 @@ const Register = () => {
             value={enteredConfirmPassword}
           />
           <div className={classes.validationControl}>
-            {error && (
-              <p>
-                Please ensure you have the right inputs and also that the
-                password matches and it is above 5 characters
-              </p>
-            )}
+            {error && <p>Please ensure you have the right inputs</p>}
           </div>
 
           <button>Submit</button>

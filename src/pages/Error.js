@@ -1,4 +1,5 @@
 import MainNavigation from '../components/MainNavigation';
+import classes from './Error.module.css';
 
 const ErrorPage = () => {
   return (
@@ -6,7 +7,7 @@ const ErrorPage = () => {
       <MainNavigation />
       <main>
         <h1>An error occured!</h1>
-        <p>Could not find this page!</p>
+        <p className={classes['error-message']}>Could not find this page!</p>
       </main>
     </>
   );
