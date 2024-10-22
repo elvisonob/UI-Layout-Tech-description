@@ -7,7 +7,7 @@ const Basket = () => {
       <MainNavigation />
       <div className={classes.basket}>
         <h2>Your Basket is empty right now</h2>
-        <p>Return to the homepage and do some shopping</p>
+        <p>Return to the homepage and do some purchase</p>
       </div>
 
       <Footer />
